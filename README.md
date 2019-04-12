@@ -8,7 +8,7 @@ This is a Ruby worker that fetches PageSpeed Insights data daily (via Heroku Sch
 
 2. Create a Heroku app:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?env[GITHUB_USER_NAME]=&env[GITHUB_USER_EMAIL]=&env[PSI_DASHBOARD_GITHUB_REPO]=&env[PSI_DASHBOARD_FOLDER]=&env[PSI_URLS]=&env[SSH_KEY]=)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/makaroni4/psi_dashboard_heroku_worker&env[GITHUB_USER_NAME]&env[GITHUB_USER_EMAIL]&env[PSI_DASHBOARD_GITHUB_REPO]&env[PSI_DASHBOARD_FOLDER]&env[PSI_URLS]&env[SSH_KEY])
 
 Make sure to add all Environment variables:
 
