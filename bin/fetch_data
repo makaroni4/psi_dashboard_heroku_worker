@@ -86,6 +86,7 @@ Dir.chdir ENV["PSI_DASHBOARD_FOLDER"]
 
 # TODO: extract user name to an ENV variable
 system `git config --replace-all user.email "#{ENV['GITHUB_USER_EMAIL']}"`
+system `git config --global user.name "#{ENV['GITHUB_USER_NAME']}"`
 system `git add .`
 system `git commit -m "Update data on #{Date.today}"`
 system `git push`
