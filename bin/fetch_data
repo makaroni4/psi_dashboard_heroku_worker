@@ -76,7 +76,7 @@ end
 # TODO: extract URL to repo to an ENV variable
 system `git clone #{ENV["PSI_DASHBOARD_GITHUB_REPO"]}`
 
-urls = JSON.parse(File.read(URLS_FILE))
+urls = ENV["PSI_URLS"].split(",").map(&:strip)
 urls.each do |url|
   download_report(url)
 end

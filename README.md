@@ -4,7 +4,7 @@ This is a Ruby worker that fetches PageSpeed Insights data daily (via Heroku Sch
 
 # Installation
 
-1. Create `urls.json` file from `urls.json.template` and add URLs you'd like to monitor with PSI Dashboard.
+1. Add `PSI_URLS` ENV variable to Heroku app with a comma separated list of URLS: `https://www.foo.bar,https://www.bar.foo`
 
 2. Since Heroku worker will push to our Github repo with dashboard we'd need to generate SSH key pair and add private key to Heroku and add a public key to a Github repo as a deploy key with read & write access.
 
