@@ -74,7 +74,7 @@ def download_report(url)
 end
 
 # TODO: extract URL to repo to an ENV variable
-system `git clone git@github.com:makaroni4/psi_dashboard_test.git`
+system `git clone #{ENV["PSI_DASHBOARD_GITHUB_REPO"]}`
 
 urls = JSON.parse(File.read(URLS_FILE))
 urls.each do |url|
@@ -82,11 +82,10 @@ urls.each do |url|
 end
 
 # TODO: extract project folder to an ENV variable
-Dir.chdir "psi_dashboard_test"
+Dir.chdir ENV["PSI_DASHBOARD_FOLDER"]
 
 # TODO: extract user name to an ENV variable
-system `git config --replace-all user.email "makaroni4@gmail.com"`
-system `git config --replace-all user.name "Heroku PSI Dashboard Worker"`
+system `git config --replace-all user.email "#{ENV['GITHUB_USER_EMAIL']}"`
 system `git add .`
 system `git commit -m "Update data on #{Date.today}"`
 system `git push`
