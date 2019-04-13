@@ -26,6 +26,9 @@
   "buildpacks": [
     {
       "url": "https://github.com/debitoor/ssh-private-key-buildpack.git"
+    },
+    {
+      "url": "heroku/ruby"
     }
   ]
 }
