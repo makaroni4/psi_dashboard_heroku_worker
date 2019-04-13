@@ -2,5 +2,25 @@
   "name": "PageSpeed Insights Dashboard worker",
   "description": "A ruby script that fetches PSI data",
   "repository": "https://github.com/makaroni4/psi_dashboard_heroku_worker",
-  "keywords": ["PSI", "PageSpeedInsights", "dashboard"]
+  "keywords": ["PSI", "PageSpeedInsights", "dashboard"],
+  "env": {
+    "GITHUB_USER_NAME": {
+      "description": "Your Github username"
+    },
+    "GITHUB_USER_EMAIL": {
+      "description": "Your Github email"
+    },
+    "PSI_DASHBOARD_GITHUB_REPO": {
+      "description": "Your clone of PSI Dashboard Github repo"
+    },
+    "PSI_DASHBOARD_FOLDER": {
+      "description": "Folder name of your clone, should be page-speed-insights-dashboard"
+    },
+    "PSI_URLS": {
+      "description": "A comma separated list of URLS: https://www.foo.bar,https://www.bar.foo"
+    },
+    "SSH_KEY": {
+      "description": "A private SSH key you've generated"
+    }
+  }
 }
