@@ -30,5 +30,8 @@
     {
       "url": "heroku/ruby"
     }
+  ],
+  "addons": [
+    "scheduler"
   ]
 }
