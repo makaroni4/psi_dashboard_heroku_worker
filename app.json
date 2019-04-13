@@ -22,5 +22,10 @@
     "SSH_KEY": {
       "description": "A private SSH key you've generated"
     }
-  }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/debitoor/ssh-private-key-buildpack.git"
+    }
+  ]
 }
